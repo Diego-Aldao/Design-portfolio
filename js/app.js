@@ -34,7 +34,7 @@ let contador = 0;
 
 function cambiarNombre() {
   const palabras = ["analiticos", "minimalistas", "visuales"];
-
+  
   spanTitulo.textContent = palabras[contador];
 
   contador++;

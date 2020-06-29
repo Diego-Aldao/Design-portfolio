@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3 ease-in-out;
 }
 body {
   overflow-x: hidden;
@@ -30,6 +29,7 @@ body {
   height: 45px;
   display: flex;
   justify-content: space-between;
+  padding: 0 3%;
 }
 .logo {
   width: 120px;
@@ -95,7 +95,6 @@ body {
   display: inline-block;
   text-align: center;
   opacity: 1;
-  transition: all 0.5s ease-in-out;
 }
 @media (min-width: 550px) {
   .efecto-titulo {
@@ -163,16 +162,106 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 .imagenes {
   margin: 0;
   padding: 0;
   flex-basis: 100%;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.imagenes:hover .hover-imagenes {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.hover-imagenes {
+  width: 80%;
+  height: 80%;
+  max-width: 350px;
+  max-height: 350px;
+  background: rgba(255, 255, 255, 0.938);
+  position: absolute;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  transform: rotateX(0deg);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.tag {
+  text-transform: capitalize;
+  padding: 3px 7px;
+  margin-bottom: 15px;
+  font-size: clamp(0.6rem, 3vw, 0.9rem);
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(255, 42, 106, 0.288);
+  font-weight: bold;
+}
+.autor {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: clamp(1.3rem, 6vw, 1.8rem);
+  font-style: italic;
+}
+.descripcion {
+  padding: 5px 0;
+  height: 50%;
+  font-size: clamp(0.8rem, 5vw, 1.4rem);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  margin: 0 auto;
+  font-family: "PT Serif", serif;
+  line-height: 1.6;
+}
+.btn-hover {
+  padding: 5px 10px;
+  align-self: flex-end;
+  margin-top: auto;
+  background: rgb(255, 42, 106);
+  border: none;
+  color: white;
+}
+
+@media (min-width: 470px) {
+  .tag {
+    margin-bottom: 35px;
+  }
+  .btn-hover {
+    padding: 10px 18px;
+  }
+}
+@media (min-width: 760px) {
+  .tag {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 925px) {
+  .tag {
+    margin-bottom: 35px;
+  }
+}
+
+.imagenes:hover .imagenes-principales {
+  transform: scale(1.1);
+}
+.imagenes-principales,
 img {
   width: 100%;
   height: 100%;
+  transition: all 0.5s ease-in-out;
 }
 @media (min-width: 760px) {
   .imagenes {
@@ -183,4 +272,212 @@ img {
   .imagenes {
     flex-basis: 33.3333%;
   }
+}
+
+.contenedor-servicios {
+  width: 100%;
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contenedor-titulo-secundario {
+  width: 100%;
+  margin: 50px 0;
+}
+.titulo-secundario {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 15px;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+}
+.span-servicio {
+  font-family: "PT Serif", serif;
+  font-weight: 600;
+}
+.servicios {
+  width: 100%;
+  margin: 25px 0;
+  font-family: "Montserrat", sans-serif;
+  max-width: 450px;
+}
+.icono {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: rgb(255, 42, 106);
+}
+.titulos-servicios {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+}
+.textos-servicios {
+  width: 100%;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  padding: 15px 5px;
+  color: rgb(75, 75, 75);
+  margin: 0 auto;
+  height: 120px;
+  font-family: "Work Sans", sans-serif;
+}
+.contenedor-boton-servicios {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.btn-contacto {
+  padding: 15px 20px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background-color: rgb(255, 42, 106);
+  border: none;
+  color: white;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 850px) {
+  .contenedor-servicios {
+    justify-content: space-evenly;
+  }
+  .servicios {
+    width: 30%;
+  }
+}
+footer {
+  width: 100%;
+  color: white;
+  background: black;
+  font-family: "Montserrat", sans-serif;
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.contacto,
+.contenedores-footer {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 25px;
+}
+.titulo-footer {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+.saludo {
+  font-size: 1.8rem;
+}
+.texto-footer {
+  color: rgb(124, 124, 124);
+  margin: 5px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+}
+.listas-footer {
+  display: flex;
+  width: 100%;
+}
+.ul-footer {
+  list-style: none;
+  text-transform: capitalize;
+  width: 50%;
+}
+@media (min-width: 600px) {
+  footer {
+    justify-content: space-evenly;
+  }
+}
+.flex {
+  display: none;
+}
+
+.contenedor-imagen-flotante {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.644);
+  transition: all 0.3s ease-in-out;
+}
+.contenedor-imagen {
+  width: 91%;
+  max-width: 750px;
+  min-height: 270px;
+  max-height: 750px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.btn-cerrar {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -55px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.linea-cerrar {
+  width: 30px;
+  height: 2px;
+  background: white;
+  transform: rotate(135deg);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.linea-cerrar:nth-child(2) {
+  transform: rotate(-135deg);
+}
+.btn-cerrar:hover .linea-cerrar {
+  transform: rotate(45deg);
+  background: rgb(255, 42, 106);
+}
+.btn-cerrar:hover .linea-cerrar:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.btn-izquierda {
+  position: absolute;
+  bottom: -50px;
+  left: 55px;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+}
+.btn-derecha {
+  position: absolute;
+  bottom: -50px;
+  right: 55px;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+}
+.btn-derecha:hover,
+.btn-izquierda:hover {
+  color: rgb(255, 42, 106);
 }

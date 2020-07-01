@@ -5,7 +5,7 @@
 }
 body {
   overflow-x: hidden;
-  background: #ef32d9; /* fallback for old browsers */
+  background: #ef32d9; /* Para navegadores antiguos */
   background: -webkit-linear-gradient(
     #89fffd,
     #ef32d9
@@ -20,23 +20,23 @@ body {
   background-color: white;
   margin: 20px 14px;
 }
-.header-principal {
+.flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-principal {
   flex-direction: column;
 }
 .navegacion-principal {
   width: 100%;
   height: 45px;
-  display: flex;
   justify-content: space-between;
   padding: 0 3%;
 }
 .logo {
   width: 120px;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Fondamento", cursive;
   font-size: 1.4rem;
   text-transform: capitalize;
@@ -45,10 +45,7 @@ body {
 .hamburguesa {
   width: 50px;
   height: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .linea-hamburguesa {
   width: 50%;
@@ -60,18 +57,12 @@ body {
   width: 100%;
   height: 400px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .texto-background {
   position: absolute;
   width: 100%;
   font-size: clamp(3.1rem, 13vw, 12rem);
   color: rgba(0, 0, 0, 0.055);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-transform: uppercase;
   font-weight: bolder;
   font-family: "Montserrat", sans-serif;
@@ -108,14 +99,9 @@ body {
   font-weight: bolder;
   font-style: italic;
   text-transform: capitalize;
-  display: flex;
-  justify-content: center;
 }
 .clickeable {
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50%;
   max-width: 200px;
 }
@@ -158,10 +144,8 @@ body {
 /*CONTENEDOR IMAGENES*/
 .contenedor-imagenes {
   width: 100%;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   transition: all 0.5s ease-in-out;
 }
 .imagenes {
@@ -170,9 +154,6 @@ body {
   flex-basis: 100%;
   overflow: hidden;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .imagenes:hover .hover-imagenes {
   opacity: 1;
@@ -218,9 +199,6 @@ body {
   height: 50%;
   font-size: clamp(0.8rem, 5vw, 1.4rem);
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 250px;
   margin: 0 auto;
   font-family: "PT Serif", serif;
@@ -277,9 +255,6 @@ img {
 .contenedor-servicios {
   width: 100%;
   padding: 70px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 .contenedor-titulo-secundario {
@@ -308,9 +283,6 @@ img {
 .icono {
   width: 100%;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 4rem;
   color: rgb(255, 42, 106);
 }
@@ -332,9 +304,6 @@ img {
 }
 .contenedor-boton-servicios {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 15px;
 }
 .btn-contacto {
@@ -361,7 +330,6 @@ footer {
   font-family: "Montserrat", sans-serif;
   padding: 70px 20px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
@@ -399,9 +367,6 @@ footer {
     justify-content: space-evenly;
   }
 }
-.flex {
-  display: none;
-}
 
 .contenedor-imagen-flotante {
   position: fixed;
@@ -430,9 +395,6 @@ footer {
   position: absolute;
   top: -55px;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.3s ease-in-out;
 }
 .linea-cerrar {

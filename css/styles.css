@@ -48,6 +48,16 @@ body {
   text-transform: capitalize;
 }
 
+.btn-hover,
+.btn-contacto,
+.btn-cerrar,
+.btn-izquierda,
+.btn-derecha,
+.clickeable,
+.categoria {
+  cursor: pointer;
+}
+
 /*INICIO HEADER*/
 .header-principal {
   flex-direction: column;
@@ -319,6 +329,7 @@ img {
   width: 100%;
   margin-top: 15px;
 }
+
 .btn-contacto {
   padding: 15px 20px;
   text-transform: uppercase;

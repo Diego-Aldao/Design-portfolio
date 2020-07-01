@@ -14,7 +14,10 @@ body {
     #89fffd,
     #ef32d9
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Montserrat", sans-serif;
 }
+
+/*GENERALES Y GRUPOS*/
 .contenedor {
   width: calc(100% - 28px);
   background-color: white;
@@ -25,6 +28,27 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.efecto-titulo,
+.descripcion,
+.span-servicio {
+  font-family: "PT Serif", serif;
+}
+
+.textos-servicios,
+.texto-footer {
+  font-family: "Work Sans", sans-serif;
+}
+
+.logo,
+.contenedor-filtro,
+.tag,
+.ul-footer,
+.autor {
+  text-transform: capitalize;
+}
+
+/*INICIO HEADER*/
 .header-principal {
   flex-direction: column;
 }
@@ -39,7 +63,6 @@ body {
   height: 100%;
   font-family: "Fondamento", cursive;
   font-size: 1.4rem;
-  text-transform: capitalize;
   font-weight: bolder;
 }
 .hamburguesa {
@@ -65,7 +88,6 @@ body {
   color: rgba(0, 0, 0, 0.055);
   text-transform: uppercase;
   font-weight: bolder;
-  font-family: "Montserrat", sans-serif;
   font-style: italic;
   overflow: hidden;
 }
@@ -73,32 +95,32 @@ body {
   width: 100%;
   text-align: center;
   font-size: clamp(2.3rem, 4vw, 4rem);
-  font-family: "Montserrat", sans-serif;
   z-index: 1;
   padding: 0 10px;
 }
 .efecto-titulo {
   color: rgb(255, 42, 106);
   font-style: italic;
-  font-family: "PT Serif", serif;
   font-weight: 900;
   width: 230px;
   display: inline-block;
   text-align: center;
   opacity: 1;
 }
+
+/*MEDIA QUERYS HEADER*/
 @media (min-width: 550px) {
   .efecto-titulo {
     text-align: left;
   }
 }
+
+/*SECCION FILTROS*/
 .contenedor-filtro {
   width: 100%;
   height: 80px;
-  font-family: "Montserrat", sans-serif;
   font-weight: bolder;
   font-style: italic;
-  text-transform: capitalize;
 }
 .clickeable {
   height: 40px;
@@ -141,7 +163,7 @@ body {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.082);
 }
 
-/*CONTENEDOR IMAGENES*/
+/*SECCION IMAGENES*/
 .contenedor-imagenes {
   width: 100%;
   flex-direction: row;
@@ -159,7 +181,6 @@ body {
   opacity: 1;
   transform: rotateX(0deg);
 }
-
 .hover-imagenes {
   width: 80%;
   height: 80%;
@@ -172,13 +193,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Montserrat", sans-serif;
   transform: rotateX(0deg);
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
 .tag {
-  text-transform: capitalize;
   padding: 3px 7px;
   margin-bottom: 15px;
   font-size: clamp(0.6rem, 3vw, 0.9rem);
@@ -190,7 +209,6 @@ body {
 .autor {
   width: 100%;
   text-align: center;
-  text-transform: capitalize;
   font-size: clamp(1.3rem, 6vw, 1.8rem);
   font-style: italic;
 }
@@ -201,7 +219,6 @@ body {
   text-align: center;
   max-width: 250px;
   margin: 0 auto;
-  font-family: "PT Serif", serif;
   line-height: 1.6;
 }
 .btn-hover {
@@ -213,25 +230,6 @@ body {
   color: white;
 }
 
-@media (min-width: 470px) {
-  .tag {
-    margin-bottom: 35px;
-  }
-  .btn-hover {
-    padding: 10px 18px;
-  }
-}
-@media (min-width: 760px) {
-  .tag {
-    margin-bottom: 15px;
-  }
-}
-@media (min-width: 925px) {
-  .tag {
-    margin-bottom: 35px;
-  }
-}
-
 .imagenes:hover .imagenes-principales {
   transform: scale(1.1);
 }
@@ -241,9 +239,27 @@ img {
   height: 100%;
   transition: all 0.5s ease-in-out;
 }
+
+/*MEDIA QUERYS SECCION IMAGENES*/
+@media (min-width: 470px) {
+  .tag {
+    margin-bottom: 35px;
+  }
+  .btn-hover {
+    padding: 10px 18px;
+  }
+}
 @media (min-width: 760px) {
   .imagenes {
     flex-basis: 50%;
+  }
+  .tag {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 925px) {
+  .tag {
+    margin-bottom: 35px;
   }
 }
 @media (min-width: 1200px) {
@@ -252,6 +268,7 @@ img {
   }
 }
 
+/*SECCION SERVICIOS*/
 .contenedor-servicios {
   width: 100%;
   padding: 70px 0;
@@ -267,17 +284,14 @@ img {
   text-align: center;
   padding: 0 15px;
   font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif;
   line-height: 1.4;
 }
 .span-servicio {
-  font-family: "PT Serif", serif;
   font-weight: 600;
 }
 .servicios {
   width: 100%;
   margin: 25px 0;
-  font-family: "Montserrat", sans-serif;
   max-width: 450px;
 }
 .icono {
@@ -300,7 +314,6 @@ img {
   color: rgb(75, 75, 75);
   margin: 0 auto;
   height: 120px;
-  font-family: "Work Sans", sans-serif;
 }
 .contenedor-boton-servicios {
   width: 100%;
@@ -315,6 +328,8 @@ img {
   color: white;
   letter-spacing: 0.5px;
 }
+
+/*MEDIA QUERYS SECCION SERVICIOS*/
 @media (min-width: 850px) {
   .contenedor-servicios {
     justify-content: space-evenly;
@@ -323,11 +338,12 @@ img {
     width: 30%;
   }
 }
-footer {
+
+/*SECCION FOOTER*/
+.footer-principal {
   width: 100%;
   color: white;
   background: black;
-  font-family: "Montserrat", sans-serif;
   padding: 70px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -351,7 +367,6 @@ footer {
   margin: 5px 0;
   font-size: 0.9rem;
   font-weight: 500;
-  font-family: "Work Sans", sans-serif;
 }
 .listas-footer {
   display: flex;
@@ -359,15 +374,17 @@ footer {
 }
 .ul-footer {
   list-style: none;
-  text-transform: capitalize;
   width: 50%;
 }
+
+/*MEDIA QUERYS SECCION FOOTER*/
 @media (min-width: 600px) {
   footer {
     justify-content: space-evenly;
   }
 }
 
+/*IMAGEN FLOTANTE*/
 .contenedor-imagen-flotante {
   position: fixed;
   width: 100%;
@@ -405,6 +422,8 @@ footer {
   position: absolute;
   transition: all 0.3s ease-in-out;
 }
+
+/*Animacion del hover de la cruz*/
 .linea-cerrar:nth-child(2) {
   transform: rotate(-135deg);
 }
@@ -415,10 +434,11 @@ footer {
 .btn-cerrar:hover .linea-cerrar:nth-child(2) {
   transform: rotate(-45deg);
 }
-.btn-izquierda {
+
+.btn-izquierda,
+.btn-derecha {
   position: absolute;
   bottom: -50px;
-  left: 55px;
   width: 40px;
   height: 40px;
   font-size: 2rem;
@@ -427,17 +447,11 @@ footer {
   border: none;
   outline: none;
 }
+.btn-izquierda {
+  left: 55px;
+}
 .btn-derecha {
-  position: absolute;
-  bottom: -50px;
   right: 55px;
-  width: 40px;
-  height: 40px;
-  font-size: 2rem;
-  color: white;
-  background: none;
-  border: none;
-  outline: none;
 }
 .btn-derecha:hover,
 .btn-izquierda:hover {

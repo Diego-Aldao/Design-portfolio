@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
@@ -18,10 +19,14 @@ body {
 }
 
 /*GENERALES Y GRUPOS*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .contenedor {
   width: calc(100% - 28px);
-  background-color: white;
   margin: 20px 14px;
+  background-color: white;
 }
 .flex {
   display: flex;
@@ -80,42 +85,49 @@ body {
   height: 100%;
   flex-direction: column;
 }
+.hamburguesa:hover .linea-hamburguesa {
+  width: 65%;
+}
+.hamburguesa:hover .linea-hamburguesa:nth-child(2) {
+  width: 75%;
+}
 .linea-hamburguesa {
   width: 50%;
-  height: 1px;
-  background: rgb(65, 65, 65);
+  height: 2px;
   margin: 4px;
+  background: rgb(0, 0, 0);
+  transition: all 0.2s ease-in-out;
 }
 .contenedor-titulo-principal {
+  position: relative;
   width: 100%;
   height: 400px;
-  position: relative;
 }
 .texto-background {
   position: absolute;
   width: 100%;
-  font-size: clamp(3.1rem, 13vw, 12rem);
+  overflow: hidden;
   color: rgba(0, 0, 0, 0.055);
+  font-size: clamp(3.1rem, 13vw, 12rem);
   text-transform: uppercase;
   font-weight: bolder;
   font-style: italic;
-  overflow: hidden;
 }
 .titulo-principal {
+  z-index: 1;
   width: 100%;
+  padding: 0 10px;
   text-align: center;
   font-size: clamp(2.3rem, 4vw, 4rem);
-  z-index: 1;
-  padding: 0 10px;
 }
 .efecto-titulo {
+  width: 230px;
+  display: inline-block;
+  opacity: 1;
   color: rgb(255, 42, 106);
   font-style: italic;
   font-weight: 900;
-  width: 230px;
-  display: inline-block;
   text-align: center;
-  opacity: 1;
 }
 
 /*MEDIA QUERYS HEADER*/
@@ -133,33 +145,33 @@ body {
   font-style: italic;
 }
 .clickeable {
-  height: 40px;
   width: 50%;
   max-width: 200px;
+  height: 40px;
 }
 .menu-categorias {
   width: 20px;
   height: 20px;
-  margin-left: 15px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 15px;
 }
 .cuadrado-categorias {
   width: 7px;
   height: 7px;
-  background: black;
   margin: 1px;
+  background: black;
 }
 
 .contenedor-categorias {
   width: 100%;
+  max-width: 800px;
+  display: none; /*PARA CAMBIAR CON JS*/
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   padding: 20px 0;
-  max-width: 800px;
   margin: 0 auto;
-  display: none;
 }
 .display {
   display: flex;
@@ -169,8 +181,8 @@ body {
   margin: 5px 5px;
   background: none;
   border: 1px solid rgb(238, 238, 238);
-  color: rgb(90, 90, 90);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.082);
+  color: rgb(90, 90, 90);
 }
 
 /*SECCION IMAGENES*/
@@ -181,30 +193,30 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .imagenes {
-  margin: 0;
-  padding: 0;
+  position: relative;
   flex-basis: 100%;
   overflow: hidden;
-  position: relative;
+  margin: 0;
+  padding: 0;
 }
 .imagenes:hover .hover-imagenes {
   opacity: 1;
   transform: rotateX(0deg);
 }
 .hover-imagenes {
-  width: 80%;
-  height: 80%;
-  max-width: 350px;
-  max-height: 350px;
-  background: rgba(255, 255, 255, 0.938);
   position: absolute;
+  width: 80%;
+  max-width: 350px;
+  height: 80%;
+  max-height: 350px;
+  display: flex;
   margin: 0 auto;
   padding: 15px;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transform: rotateX(0deg);
   opacity: 0;
+  background: rgba(255, 255, 255, 0.938);
+  transform: rotateX(0deg);
   transition: all 0.5s ease-in-out;
 }
 .tag {
@@ -223,21 +235,21 @@ body {
   font-style: italic;
 }
 .descripcion {
-  padding: 5px 0;
+  max-width: 250px;
   height: 50%;
+  padding: 5px 0;
+  margin: 0 auto;
   font-size: clamp(0.8rem, 5vw, 1.4rem);
   text-align: center;
-  max-width: 250px;
-  margin: 0 auto;
   line-height: 1.6;
 }
 .btn-hover {
   padding: 5px 10px;
   align-self: flex-end;
   margin-top: auto;
-  background: rgb(255, 42, 106);
   border: none;
   color: white;
+  background: rgb(255, 42, 106);
 }
 
 .imagenes:hover .imagenes-principales {
@@ -281,18 +293,18 @@ img {
 /*SECCION SERVICIOS*/
 .contenedor-servicios {
   width: 100%;
-  padding: 70px 0;
   flex-wrap: wrap;
+  padding: 70px 0;
 }
 .contenedor-titulo-secundario {
   width: 100%;
   margin: 50px 0;
 }
 .titulo-secundario {
-  margin: 0 auto;
   max-width: 600px;
-  text-align: center;
+  margin: 0 auto;
   padding: 0 15px;
+  text-align: center;
   font-size: 1.6rem;
   line-height: 1.4;
 }
@@ -301,14 +313,18 @@ img {
 }
 .servicios {
   width: 100%;
-  margin: 25px 0;
   max-width: 450px;
+  margin: 25px 0;
 }
 .icono {
   width: 100%;
   height: 100px;
-  font-size: 4rem;
   color: rgb(255, 42, 106);
+  font-size: 4rem;
+  transition: all 0.1s ease-in-out;
+}
+.icono:hover {
+  font-size: 5rem;
 }
 .titulos-servicios {
   width: 100%;
@@ -317,13 +333,13 @@ img {
 }
 .textos-servicios {
   width: 100%;
+  height: 120px;
+  padding: 15px 5px;
+  margin: 0 auto;
+  color: rgb(75, 75, 75);
   text-align: center;
   line-height: 1.7;
   font-size: 0.95rem;
-  padding: 15px 5px;
-  color: rgb(75, 75, 75);
-  margin: 0 auto;
-  height: 120px;
 }
 .contenedor-boton-servicios {
   width: 100%;
@@ -332,11 +348,11 @@ img {
 
 .btn-contacto {
   padding: 15px 20px;
+  color: white;
+  border: none;
+  background-color: rgb(255, 42, 106);
   text-transform: uppercase;
   font-size: 0.8rem;
-  background-color: rgb(255, 42, 106);
-  border: none;
-  color: white;
   letter-spacing: 0.5px;
 }
 
@@ -353,12 +369,12 @@ img {
 /*SECCION FOOTER*/
 .footer-principal {
   width: 100%;
-  color: white;
-  background: black;
   padding: 70px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  color: white;
+  background: black;
 }
 .contacto,
 .contenedores-footer {
@@ -378,6 +394,11 @@ img {
   margin: 5px 0;
   font-size: 0.9rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.texto-footer:hover {
+  color: white;
 }
 .listas-footer {
   display: flex;
@@ -398,11 +419,11 @@ img {
 /*IMAGEN FLOTANTE*/
 .contenedor-imagen-flotante {
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   z-index: 3;
+  width: 100%;
+  height: 100%;
   display: none;
   justify-content: center;
   align-items: center;
@@ -410,27 +431,28 @@ img {
   transition: all 0.3s ease-in-out;
 }
 .contenedor-imagen {
+  position: relative;
   width: 91%;
   max-width: 750px;
   min-height: 270px;
   max-height: 750px;
-  position: relative;
   transition: all 0.3s ease-in-out;
 }
 .btn-cerrar {
-  width: 50px;
-  height: 50px;
   position: absolute;
   top: -55px;
   right: 0;
+  width: 50px;
+  height: 50px;
   transition: all 0.3s ease-in-out;
+  z-index: 11;
 }
 .linea-cerrar {
+  position: absolute;
   width: 30px;
   height: 2px;
   background: white;
   transform: rotate(135deg);
-  position: absolute;
   transition: all 0.3s ease-in-out;
 }
 
@@ -452,11 +474,11 @@ img {
   bottom: -50px;
   width: 40px;
   height: 40px;
-  font-size: 2rem;
-  color: white;
-  background: none;
   border: none;
   outline: none;
+  color: white;
+  background: none;
+  font-size: 2rem;
 }
 .btn-izquierda {
   left: 55px;
@@ -467,4 +489,60 @@ img {
 .btn-derecha:hover,
 .btn-izquierda:hover {
   color: rgb(255, 42, 106);
+}
+
+/*MENU DESPLAZABLE*/
+
+.menu-desplegable {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background: #ef32d9; /* Para navegadores antiguos */
+  background: -webkit-linear-gradient(
+    #89fffd,
+    #ef32d9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    #89fffd,
+    #ef32d9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+.contenido-menu-desplegable {
+  position: relative;
+  height: 95.5%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 100px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.secciones {
+  margin: 30px 0px;
+  transition: all 0.3s ease-in-out;
+}
+.secciones:hover {
+  color: gray;
+}
+.cerrar-desplegable {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.linea-negra {
+  background: black;
+}
+
+.cerrar-desplegable:hover .linea-negra {
+  transform: rotate(45deg);
+}
+.cerrar-desplegable:hover .linea-negra:nth-child(2) {
+  transform: rotate(-45deg);
 }

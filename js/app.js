@@ -26,6 +26,12 @@
     ".contenedor-imagen-flotante"
   );
 
+  //SECCION MENU DESPLEGABLE
+  const menuDesplegable = document.querySelector(".menu-desplegable");
+  const btnAbrirDesplegable = document.querySelector(".hamburguesa");
+  const btnCerrarDesplegable = document.querySelector(".cerrar-desplegable");
+  const linksSecciones = document.querySelectorAll(".secciones");
+
   //SET INTERVAL CAMBIO DE PALABRA DEL TITULO
   let contador = 0;
 
@@ -100,5 +106,20 @@
       contadorImagenes = 0;
     }
     imgFlotante.src = listaDeImagenes[contadorImagenes];
+  });
+
+  //EVENT LISTENERS MENU DESPLEGABLE
+  btnAbrirDesplegable.addEventListener("click", () => {
+    menuDesplegable.style.right = "0px";
+  });
+
+  btnCerrarDesplegable.addEventListener("click", () => {
+    menuDesplegable.style.right = "-100%";
+  });
+
+  linksSecciones.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuDesplegable.style.right = "-100%";
+    });
   });
 })();

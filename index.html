@@ -30,7 +30,9 @@
   </head>
   <body>
     <div class="contenedor">
+      <!--INICIO HEADER-->
       <header class="header-principal flex">
+        <!--INICIO NAV PRINCIPAL-->
         <nav class="navegacion-principal flex">
           <div class="logo flex">
             <p>moonlight.</p>
@@ -41,6 +43,7 @@
             <span class="linea-hamburguesa"></span>
           </div>
         </nav>
+        <!--INICIO CONTENIDO HEADER-->
         <div class="contenedor-titulo-principal flex">
           <p class="texto-background flex">moonlight</p>
           <h1 class="titulo-principal">
@@ -48,7 +51,8 @@
             imprimibles y <span class="efecto-titulo">visuales</span>
           </h1>
         </div>
-        <div class="contenedor-filtro flex">
+        <!--INICIO SECCION FILTROS-->
+        <section class="contenedor-filtro flex">
           <div class="clickeable flex">
             <p>categorias</p>
             <div class="menu-categorias">
@@ -58,7 +62,7 @@
               <span class="cuadrado-categorias"></span>
             </div>
           </div>
-        </div>
+        </section>
         <div class="contenedor-categorias">
           <button class="categoria" data-filter="todos">Todos</button>
           <button class="categoria" data-filter="fotografia">Fotografia</button>
@@ -67,7 +71,8 @@
           <button class="categoria" data-filter="maqueta">Maquetas</button>
         </div>
       </header>
-      <section class="contenedor-imagenes flex">
+      <!--INICIO CONTENIDO PRINCIPAL-->
+      <section class="contenedor-imagenes flex" id="proyectos">
         <div class="imagenes flex" data-item="diseño">
           <img
             class="imagenes-principales"
@@ -204,7 +209,8 @@
           </div>
         </div>
       </section>
-      <div class="contenedor-servicios flex">
+      <!--INICIO CONTENIDO SERVICIOS-->
+      <div class="contenedor-servicios flex" id="servicios">
         <div class="contenedor-titulo-secundario">
           <h2 class="titulo-secundario">
             Mas de diez años de
@@ -241,7 +247,8 @@
           <button class="btn-contacto">contactanos</button>
         </div>
       </div>
-      <footer class="footer-principal">
+      <!--INICIO FOOTER-->
+      <footer class="footer-principal" id="contacto">
         <div class="contacto">
           <h2 class="titulo-footer saludo">Saludanos!</h2>
           <p class="texto-footer">Lorem ipsum dolor sit amet.</p>
@@ -285,6 +292,7 @@
           <p class="texto-footer">2020 &copy; Moonlight.</p>
         </div>
       </footer>
+      <!--INICIO MODAL-->
       <div class="contenedor-imagen-flotante">
         <div class="contenedor-imagen">
           <img
@@ -301,6 +309,18 @@
           <button class="btn-derecha">
             <i class="fas fa-chevron-right"></i>
           </button>
+        </div>
+      </div>
+      <!--INICIO MENU DESPLEGABLE-->
+      <div class="menu-desplegable">
+        <div class="contenedor contenido-menu-desplegable flex">
+          <div class="cerrar-desplegable flex">
+            <span class="linea-cerrar linea-negra"></span
+            ><span class="linea-cerrar linea-negra"></span>
+          </div>
+          <h3 class="secciones"><a href="#proyectos">proyectos</a></h3>
+          <h3 class="secciones"><a href="#servicios">servicios</a></h3>
+          <h3 class="secciones"><a href="#contacto">contacto</a></h3>
         </div>
       </div>
     </div>
